@@ -1,7 +1,14 @@
+import json
+import os
+
 class Mahasiswa:
     def __init__(self, nama, nim):
         self.nama = nama
         self.nim = nim
+        self.umur=0;
+        
+    def getUmur():
+        return  self.umur
 
 mahasiswa_list = []
 
