@@ -116,6 +116,7 @@ def main():
             # cari data berdasrkan nim
             #pass
             nim=input("Masukkan NIM yang dicari [tidak boleh kosong] :")
+            ubah_mahasiswa(listmahasiswa,nim)
           
 
 
