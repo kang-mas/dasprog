@@ -36,7 +36,8 @@ def menampilkan_data_mahasiswa(mahasiswa):
     print("=============================")
 
 #deklarasi fungsi cari_maahasiswa()
-def cari_mahasiswa(listmahasiswa,nim):
+def cari_mahasiswa(listmahasiswa):
+    nim=input("Masukkan NIM yang dicari [tidak boleh kosong] :")
     if nim in listmahasiswa:
         mahasiswa=listmahasiswa[nim]
         menampilkan_data_mahasiswa(mahasiswa)
@@ -75,17 +76,17 @@ def hapus_mahasiswa(listmahasiswa):
     
 
 def ubah_mahasiswa(listmahasiswa):
-    nim=input("Masukkan NIM data mahasiswa yang akan diubah :")
-    mahasiswa = cari_mahasiswa(listmahasiswa, nim)
+    #nim=input("Masukkan NIM yang diubah [tidak boleh kosong] :")
+    mahasiswa = cari_mahasiswa(listmahasiswa)
     if mahasiswa :
         nama=input("Masukkan Nama Mahasiswa   :")
         umur=input("Masukkan Umur Mahasiswa   :")
         if nama != "" :
             mahasiswa.update({"nama": nama})
         if umur != "" :
-            mahasiswa.upate({"umur":int(umur)})
+            mahasiswa.update({"umur":int(umur)})
 
-        listmahasiswa.update({nim:mahasiswa})
+        listmahasiswa.update({mahasiswa["nim"]:mahasiswa})
         with open('data.json', 'w') as f:
             json.dump(listmahasiswa,f)
 
@@ -115,20 +116,20 @@ def main():
         elif pilihan=="2":
             # cari data berdasrkan nim
             #pass
-            nim=input("Masukkan NIM yang dicari [tidak boleh kosong] :")
-            ubah_mahasiswa(listmahasiswa,nim)
+           
+            listmahasiswa=cari_mahasiswa(listmahasiswa)
           
 
 
         elif pilihan == "3":
             # ubah data berdasarkan nim
             #pass
-            ubah_mahasiswa(listmahasiswa)
+            listmahasiswa=ubah_mahasiswa(listmahasiswa)
             
 
         elif pilihan=="4":
             #hhapus data maahasiswa
-            hapus_mahasiswa(listmahasiswa)
+            listmahasiswa=hapus_mahasiswa(listmahasiswa)
             
         elif pilihan=="5":
             break
