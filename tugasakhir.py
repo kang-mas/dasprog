@@ -1,5 +1,5 @@
 import os
-import  math
+import math
 
 class Bola:
   def __init__(self, r):
