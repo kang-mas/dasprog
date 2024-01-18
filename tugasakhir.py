@@ -56,34 +56,34 @@ def main():
         elif pilihan == "3": #Tampilkan jari-ari
             print("==Program Menhitung Bola==")
             print("==========================")
-            printt(f" Jari-Jari Bola : {bola.r}")
+            print(f" Jari-Jari Bola : {bola.r}")      #  solusi
             print("==========================")
 
         elif pilihan=="4": #tampikan volume bola
            
             print("==Program Menhitung Bola==")
             print("==========================")
-            printt(f" Volume Bola : {bola.volume_bola()}")
+            print(f" Volume Bola : {bola.volume_bola()}") #solusi
             print("==========================")
         
         elif pilihan=="5": # tampilkan luas kulit bola 
             print("==Program Menhitung Bola==")
             print("==========================")
-            printt(f" Luas kulit Bola : {bola.luas_kulit_bola()}")
+            print(f" Luas kulit Bola : {bola.luas_kulit_bola()}") #solusi
             print("==========================")
           
         elif pilihan=="6": # tampilkan volume setengah bola
             print("==Program Menhitung Bola==")
             print("==========================")
-            printt(f" Volume setengah Bola : {bola.volume_setengah_bola()}")
+            print(f" Volume setengah Bola : {bola.volume_setengah_bola()}") # solusi
             print("==========================")
 
         elif pilihan=="7": # tapilkan  jari-jari, volume bola dan luas kulit bola
             print("==Program Menhitung Bola==")
             print("==========================")
-            printt(f" Jari-Jari Bola : {bola.r}")
-            printt(f" Volume Bola : {bola.volume_bola()}")
-            printt(f" Luas kulit Bola : {bola.luas_kulit_bola()}")
+            print(f" Jari-Jari Bola : {bola.r}")                     #
+            print(f" Volume Bola : {bola.volume_bola()}")            # solusi
+            print(f" Luas kulit Bola : {bola.luas_kulit_bola()}")    #
             print("==========================")  
         
         elif pilihan=="8":
@@ -97,5 +97,5 @@ def main():
                 if x_quit =="":
                     break
 
-if __name__=="main__":
+if __name__=="__main__":
   main()
