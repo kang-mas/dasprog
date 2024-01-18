@@ -1,18 +1,21 @@
 import os
+import math
+
 class Bola:
   def __init__(self, r):
     self.r=r
   
   def volume_bola(self):
-    vol =
+    vol =(4/3) * math.pi * self.r**3 ## solusi
     return vol
   
   def luas_kulit_bola(self):
-    luas = 
+    luas = 4 * math.pi * self.r**2 ## solusi
     return luas
 
   def volume_setengah_bola(self):
-    vol=
+    vol= (2/3)  * math.pi * self.r ** 3 ## solusi 
+    # vol = 0.5 * self.volume_bolla() ##  alternatif solusi
     return vol
 
 def clear_screen():
@@ -38,7 +41,7 @@ def menu():
     return ops
 def main():
     diameter= int(input("Masukkan Diameter Bola :")) 
-    bola= new Bola(diameter/2)  
+    bola= Bola(diameter/2)  
     while True:
         pilihan = menu()
         
@@ -53,21 +56,35 @@ def main():
         elif pilihan == "3": #Tampilkan jari-ari
             print("==Program Menhitung Bola==")
             print("==========================")
-            printt(f" Jari-Jari Bola : {bola.r}")
+            print(f" Jari-Jari Bola : {bola.r}")      #  solusi
             print("==========================")
 
         elif pilihan=="4": #tampikan volume bola
            
             print("==Program Menhitung Bola==")
             print("==========================")
-            printt(f" Volume Bola : {bola.volume_bola()}")
+            print(f" Volume Bola : {bola.volume_bola()}") #solusi
             print("==========================")
         
         elif pilihan=="5": # tampilkan luas kulit bola 
+            print("==Program Menhitung Bola==")
+            print("==========================")
+            print(f" Luas kulit Bola : {bola.luas_kulit_bola()}") #solusi
+            print("==========================")
           
         elif pilihan=="6": # tampilkan volume setengah bola
+            print("==Program Menhitung Bola==")
+            print("==========================")
+            print(f" Volume setengah Bola : {bola.volume_setengah_bola()}") # solusi
+            print("==========================")
 
-        elif pilihan=="7": # tapilkan  jari-jari, volume bola dan luas kulit bola  
+        elif pilihan=="7": # tapilkan  jari-jari, volume bola dan luas kulit bola
+            print("==Program Menhitung Bola==")
+            print("==========================")
+            print(f" Jari-Jari Bola : {bola.r}")                     #
+            print(f" Volume Bola : {bola.volume_bola()}")            # solusi
+            print(f" Luas kulit Bola : {bola.luas_kulit_bola()}")    #
+            print("==========================")  
         
         elif pilihan=="8":
              break
@@ -80,5 +97,5 @@ def main():
                 if x_quit =="":
                     break
 
-if __name__=="main__":
+if __name__=="__main__":
   main()
